@@ -2132,6 +2132,17 @@ html, body {
   font-size: 2.5rem !important;       /* علامة & */
   margin: 2px 0 !important;
 }
+/* إلغاء الفراغ الطولي في سكشن العد التنازلي والترحيب */
+.countdown-section {
+  min-height: auto !important;      /* يخلي ارتفاع السكشن على قد المحتوى بالضبط */
+  padding-top: 45px !important;     /* مسافة مريحة من الأعلى */
+  padding-bottom: 45px !important;  /* مسافة مريحة من الأسفل */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;             /* مسافة ثابتة ومضبوطة بين العداد والنص والقصر */
+}
     </style>
     </style>
 </head>
