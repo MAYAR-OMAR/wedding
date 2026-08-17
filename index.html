@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> لبني & عبدالعظيم- Wedding Invitation</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
+
+  
+   <style>
+        :root {
+            --bg-color: #f5f4f0;
+            --text-gold: #9c8059;
+            --text-dark: #8b6d47;
+            --bg-brown: #876943;
+            --border-color: #d8cebe;
+            --font-script: 'Pinyon Script', cursive;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-gold);
+            font-family: var(--font-serif);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            text-align: center;
+        }
+
+        /* --- UI Elements --- */
+        .audio-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 100;
+            cursor: pointer;
+            border: none;
+            color: var(--text-gold);
+        }
+
+        .divider-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            opacity: 0.6;
+        }
+        
+        .divider-icon::before, .divider-icon::after {
+            content: '';
+            height: 1px;
+            width: 60px;
+            background-color: currentColor;
+            margin: 0 15px;
+            opacity: 0.5;
+        }
+
+        .flower-divider {
+            width: 150px;
+            margin: 40px auto;
+            opacity: 0.5;
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        /* 1. Hero Section (Video Background) */
+        .hero-video-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-top-text {
+            font-family: var(--font-sans);
+            letter-spacing: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero-names {
+            font-family: var(--font-script);
+            font-size: 5.5rem;
+            line-height: 1;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            margin: -10px 0;
+        }
+        
+        .hero-amp {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+        
+        .hero-date {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: var(--font-sans);
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            z-index: 1;
+        }
+        
+        .scroll-arrow {
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        /* 2. Countdown & Welcome */
+        .title-script {
+            font-family: var(--font-script);
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        .subtitle-caps {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .countdown-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .cd-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .cd-item:not(:last-child)::after {
+            content: '|';
+            position: absolute;
+            right: -12px;
+            top: 5px;
+            color: var(--border-color);
+            font-weight: 300;
+        }
+        .cd-number {
+            font-size: 2rem;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        .cd-label {
+            font-family: var(--font-sans);
+            font-size: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .welcome-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* 3. When & Where */
+        .time-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .time-block {
+            display: flex;
+            flex-direction: column;
+        }
+        .time-main {
+            font-size: 2rem;
+        }
+        .time-sub {
+            font-family: var(--font-sans);
+            font-size: 0.5rem;
+            letter-spacing: 2px;
+            color: #bfae99;
+            margin-top: 5px;
+        }
+
+        /* 4. Our Moments (Slider) */
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 15px;
+            padding: 20px 0;
+            scrollbar-width: none;
+        }
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+        .slide {
+            scroll-snap-align: center;
+            min-width: 85vw;
+            height: 450px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        /* 5. Venue */
+        .venue-sketch {
+            width: 80%;
+            max-width: 300px;
+            margin: 0 auto 20px;
+            mix-blend-mode: multiply;
+        }
+        .venue-name {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        .venue-subtitle {
+            font-family: var(--font-script);
+            font-size: 3rem;
+            margin-bottom: 5px;
+        }
+        .map-container {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            margin: 30px auto;
+            background: #eee;
+            border-radius: 4px;
+            position: relative;
+        }
+        .map-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-gold);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* 6. Dress Code */
+        .dress-code-card {
+            background: #fbfaf8;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px 20px;
+            max-width: 350px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .dc-title {
+            font-family: var(--font-script);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .dc-gender {
+            font-family: var(--font-script);
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+        .dc-desc {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .dc-line {
+            width: 40px;
+            height: 1px;
+            background: var(--border-color);
+            margin: 20px auto;
+        }
+
+        /* 7. Kids Note */
+        .kids-note {
+            background-color: var(--bg-brown);
+            color: #fff;
+            padding: 60px 20px;
+        }
+        .kids-note .title-script {
+            color: #fff;
+        }
+        .kids-desc {
+            font-style: italic;
+            font-size: 1.1rem;
+            max-width: 350px;
+            margin: 20px auto 40px;
+            line-height: 1.6;
+        }
+
+        /* 8. RSVP Form */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .form-desc {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--text-gold);
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+        }
+        input[type="radio"]::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            background-color: var(--text-gold);
+        }
+        input[type="radio"]:checked::before {
+            transform: scale(1);
+        }
+        .input-field {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 0;
+            color: var(--text-gold);
+            font-family: var(--font-serif);
+            font-size: 1rem;
+        }
+        .input-field:focus {
+            outline: none;
+            border-bottom-color: var(--text-gold);
+        }
+        .textarea-field {
+            width: 100%;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 15px;
+            height: 100px;
+            color: var(--text-gold);
+            font-family: var(--font-serif);
+            resize: none;
+        }
+        .counter {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .counter-btn {
+            width: 35px;
+            height: 35px;
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-gold);
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #a8947b;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 20px 80px;
+        }
+        .footer-rings {
+            width: 40px;
+            opacity: 0.5;
+            margin-bottom: 20px;
+        }
+        .footer-names {
+            font-family: var(--font-script);
+            font-size: 2.5rem;
+        }
+        /* Envelope Cover Styles */
+.envelope-screen {
+    position: fixed;
+    inset: 0; /* by3ml top, bottom, left, right : 0 */
+    width: 100%;
+    height: 100vh;
+    z-index: 9999; /* 3ashan yb2a fo2 ay 7aga fl website */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f4f0;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.env-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.seal-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(20px);
+}
+
+.gold-seal {
+    width: 120px; /* Zabaty el ma2as 3ala hasab sortek */
+    transition: transform 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.seal-container:hover .gold-seal {
+    transform: scale(1.1);
+}
+
+.click-hint {
+    margin-top: 15px;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: #8b6d47;
+    opacity: 0.7;
+}
+
+/* Animation lma ndoos */
+.envelope-screen.opened {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.1); /* By3ml effect eno bykber w ykhtefy */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* 3ashan nwa2af scroll el saf7a w el envelope ma2fool */
+body.locked {
+    overflow: hidden;
+}
+/* Envelope Cover Styles Update */
+.envelope-screen {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    cursor: pointer; /* Ykhaly el shasha kolaha clickable */
+    background-color: #f5f4f0;
+    transition: opacity 1s ease-in-out; /* Fade effect */
+}
+
+.env-video, .env-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 3ashan ymaly el shasha kowayes */
+}
+
+.env-bg {
+    z-index: 2; /* Fo2 el video */
+    transition: opacity 0.5s ease; /* 3ashan tkhtefy b-n3oma lma ndoos */
+}
+
+.env-video {
+    z-index: 1; /* Taht el sora */
+}
+
+/* Class hydeefo el JavaScript 3ashan ykhfy el shasha b3d ma tftah */
+.envelope-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.program-subtitle {
+    text-align: center; 
+    font-size: 1.1rem; 
+    color: #a68966; 
+    margin-top: -10px; 
+    margin-bottom: 40px; 
+    font-style: italic;
+}
+
+.timeline-wrapper {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* الخط الرأسي الوردي/الذهبي الممتد في الخلفية */
+.timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: #d8cebe; 
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 45px;
+    z-index: 2;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* الدوائر المفرغة في المنتصف */
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fcfbfa; /* ضعي هنا نفس لون خلفية دعوتك ليظهر مفرغاً */
+    border: 2px solid #a68966; 
+    border-radius: 50%;
+    margin: 0 auto 12px auto;
+}
+
+.timeline-time {
+    font-size: 1.1rem;
+    color: #a68966;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.timeline-title {
+    font-size: 1.8rem;
+    color: #2b2b2b;
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.timeline-desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    padding: 0 10px;
+}
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Di elli btkhlih ymala el shasha sa7 */
+    object-position: center; /* Di btgib el 3ersan fel nos */
+    z-index: -2;
+}
+/* 1. El Section elly shayel el video wel kalam */
+.hero-video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Bymala tool shashet el mobile aw el laptop 100% */
+    overflow: hidden; /* By-mn3 ay zwayed enaha tbawz el shasha */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. El Video nfso */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Byfared el video bshtkl motanasek */
+    object-position: center; /* Bygib el 3ersan fel nos */
+    z-index: -1; /* Byrmy el video wara 5ales 3ashan el kalam yban fo2eh */
+}
+
+/* 3. El Kalam w el zorar elly fo2 el video (Asmaa' el 3ersan wel taree5) */
+/* Et2kedy en class el kalam 3andek wa5ed z-index 3aly 3ashan yban */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Bykhaly el kalam fo2 el video */
+    text-align: center;
+    font-family: 'Aref Ruqaa', serif;
+  font-size: 3rem;
+}
+.hero-names {
+  font-family: 'Aref Ruqaa Ink', serif;
+  font-size: 50px;
+  color: #ffffff;
+}
+.hero-names {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+.hero-date {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+/* البسملة: نفس خط الأسماء + مسافة من فوق */
+.bismillah {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 25px; /* بتنزلها لتحت عشان متكونش لازقة فوق */
+  margin-bottom: 10px;
+}
+
+/* النص الإنجليزي: خط كلاسيكي فخم ورفيع */
+.hero-top-text {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 5px; /* يعطي طابع كلاسيكي أنيق */
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* الكارت بياخد شاشة الموبايل بالكامل */
+.invitation-container {
+  width: 100vw;
+  height: 100vh;
+  
+  /* اسحبي الصورة النظيفة وبدلي اسمها هنا */
+  background-image: url('./photo1.jpeg'); 
+  background-size: cover; /* لضمان تغطية الشاشة بالكامل */
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  /* ضبط المحاذاة والتأكد إن الكلام في منتصف العقد تماماً */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  /* المسافات الداخلية لتوسيط الكلام جوة قوس الورد */
+  padding-top: 18vh; /* مسافة مناسبة تحت الورد العلوي */
+  padding-left: 10vw;
+  padding-right: 10vw;
+  text-align: center;
+  color: #2c2c2c;
+}
+
+/* الخط الخاص بالأسماء */
+.font-calligraphy {
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 700;
+}
+
+/* يتشرف */
+.title-top {
+  font-size: 2rem;
+  margin-bottom: 2vh;
+}
+
+/* قسم "الحاج أنور" و "الحاج سالم" */
+.hosts-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.host .label {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+
+.host .host-name {
+  font-size: 1.6rem;
+  margin-top: 2px;
+}
+
+/* بمناسبة زفاف نجليهما */
+.event-text {
+  font-size: 1.2rem;
+  margin: 2vh 0;
+  color: #333;
+}
+
+/* قسم العروسين */
+.couple-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5vh;
+}
+
+.title-prefix {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.couple-container .name {
+  font-size: 2.3rem;
+  line-height: 1.2;
+}
+
+.ampersand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5vh 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* يمنع السكرول الأفقي نهائياً */
+  position: relative;
+}
+
+.invitation-container {
+  width: 100%; /* استبدال 100vw بـ 100% يحل المشكلة تماماً */
+  min-height: 100vh;
+  min-height: -webkit-fill-available; /* لمنع مشكلة شريط العرض في متصفحات الموبايل */
+  
+  background-image: url('./photo1.jpeg'); 
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  padding-top: 18vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  color: #2c2c2c;
+  
+  box-sizing: border-box;
+}
+/* إزالة أي Margins أو Paddings عاملة الحافة البيضاء */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden; /* لمنع أي سكرول يمين وشمال في الصفحة كلها */
+  background-color: #eee7de; /* توحيد الخلفية مع لون كارت الدعوة */
+}
+
+/* السكشن التاني الخاص بكارت الدعوة */
+.invitation-section {
+  width: 100%;
+  min-height: 100vh; /* ياخد ارتفاع الشاشة بالكامل */
+  
+  /* الصورة الفرغة كخلفية للسكشن */
+  background-image: url('./photo1.jpeg');
+  background-size: cover; /* أو 100% 100% لو حابة يمط للشاشة بالكامل */
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  /* محاذاة النصوص داخل السكشن */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  padding-top: 15vh; /* تظبيط مسافة الكلام جوة العقد */
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+.invitation-section {
+  width: 100%;
+  /* تكبير نسبة عرض الصورة لتغطي الحواف بالكامل */
+  background-size: 110% 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* 1. تصفير الـ Parent المباشر لضمان عدم وجود حواف */
+body, main, .wrapper, .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 2. تعديل السكشن نفسه ليملأ الشاشة تماماً */
+.invitation-section {
+  width: 100% !important;
+  min-height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  background-image: url('./photo1.jpeg');
+  /* يجبر الخلفية تتمدد وتغطي العرض والارتفاع كاملاً بدون حواف بيج/بيضاء */
+  background-size: 100% 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* 1. إلغاء أي هوامش من الأب المباشر والـ Div الداخلي */
+.invitation-section,
+.invitation-section > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. تكبير حجم صورة الخلفية لتفرش الشاشة تماماً */
+.invitation-section {
+  min-height: 100vh;
+  background-image: url('./photo1.jpeg');
+  background-size: 100% 100% !important; /* أو cover */
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+/* 1. إلغاء الـ padding من السكشن الأب الخاص بالدعوة */
+section.card-section {
+  padding: 0 !important;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 2. ضبط الـ Container بالاسم الصح المطابق للـ HTML */
+.invitation-container {
+  width: 100% !important;
+  min-height: 100vh;
+  background-image: url('./photo1.jpeg');
+  background-size: 100% 100% !important; /* يمط الخلفية لتغطي كامل العرض والارتفاع */
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: 18vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+/* 1. ضبط المسافة الخارجية الشاملة داخل القوس */
+.invitation-container {
+  padding-top: 13vh !important;   /* ينزل "يتشرف" مسافة مريحة تحت الورد العلوي */
+  padding-bottom: 6vh !important; /* يضمن مسافة متناسقة فوق القاعدة والورد السفلي */
+  justify-content: flex-start !important;
+}
+
+/* 2. توزيع المسافات بين أجزاء النص بالتساوي */
+.title-top {
+  font-size: 1.8rem;
+  margin-bottom: 2.5vh !important; /* مسافة متناسقة تحت يتشرف */
+}
+
+.hosts-container {
+  margin-bottom: 2.5vh !important; /* مسافة تحت أسماء الآباء */
+}
+
+.host .host-name {
+  font-size: 1.5rem;
+}
+
+.event-text {
+  font-size: 1.1rem;
+  margin-bottom: 3vh !important; /* مسافة بين "بدعوتكم" وبين أسماء العروسين */
+}
+
+/* 3. ضبط كارت العروسين */
+.couple-container {
+  gap: 0.8vh !important;
+}
+
+.couple-container .name {
+  font-size: 2.1rem;
+  line-height: 1.15;
+}
+
+.ampersand {
+  font-size: 1.5rem;
+  margin: 0.5vh 0 !important;
+}
+/* 1. تطبيق خط الرقعة الفخم على كلمة "يتشرف" */
+.title-top {
+  font-family: 'Aref Ruqaa', serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 2vh !important;
+}
+
+/* 2. إبراز علامة (&) بخط لاتيني كلاسيكي ولون ذهبي أنيق */
+.ampersand {
+  font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', serif !important;
+  font-style: italic;
+  font-size: 2.2rem !important;
+  color: #a68966 !important; /* لون ذهبي/بني ناعم ومميز */
+  font-weight: 600;
+  margin: 0.8vh 0 !important;
+  line-height: 1;
+}
+
+/* 3. إبعاد كلمة "الدكتور / الدكتورة" عن الأسماء لمنع الالتصاق */
+.title-prefix {
+  display: block !important;
+  font-size: 1.15rem;
+  color: #4a4a4a;
+  margin-bottom: 6px !important; /* المسافة بين الدكتور والاسم */
+}
+
+.couple-container .name {
+  font-size: 2.1rem;
+  line-height: 1.2;
+}
+/* 1. رفع الحافة السفلية للحاوية لرفع اسم العروسة تلقائياً */
+.invitation-container {
+  padding-top: 11vh !important;
+  padding-bottom: 10vh !important; /* رفعت اسم العروسة لفوق عن القاعدة */
+}
+
+/* 2. تقليل المسافات الرأسية البينية لضغط الكلام في منتصف القوس */
+.title-top {
+  margin-bottom: 1.5vh !important;
+}
+
+.hosts-container {
+  margin-bottom: 1.5vh !important;
+}
+
+.event-text {
+  margin-bottom: 1.5vh !important;
+}
+
+/* 3. تقليل المسافة حول علامة (&) */
+.ampersand {
+  margin: 0.3vh 0 !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,500;1,400&family=Montserrat:wght@300;400&display=swap');
+
+.countdown-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #f7f4ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* صورة الورد الجانبية المصممة لتجلس في الزاوية بأناقة */
+.side-flower-img {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 180px; /* يمكن تعديل الحجم حسب تصميم الوردة */
+  max-width: 45vw;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+}
+
+.flower-divider {
+  width: 120px;
+  margin-bottom: 1vh;
+}
+
+.title-script {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: #8a6d48;
+  margin: 0;
+}
+
+.subtitle-caps {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7a6855; /* لون بني ذهبي هادئ */
+  font-weight: 500;
+  margin-top: 6px;
+  margin-bottom: 2.5vh;
+}
+
+/* تصميم كروت الأرقام الزجاجية */
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 3.5vh;
+}
+
+.cd-item {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(166, 137, 102, 0.25);
+  border-radius: 12px;
+  padding: 12px 8px;
+  min-width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.cd-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  line-height: 1;
+}
+
+.cd-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  color: #8a6d48;
+  margin-top: 6px;
+  letter-spacing: 1px;
+}
+
+.title-arabic {
+  font-family: 'Amiri', serif;
+  font-size: 1.9rem;
+  color: #1a1a1a;
+  margin-bottom: 1vh;
+}
+
+.welcome-text {
+  font-family: 'Amiri', serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+  padding: 0 10px;
+}
+/* 1. إرسال الصورة خلف جميع النصوص وتثبيتها أسفل اليمين */
+.side-flower-img {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 170px !important; /* حجم متناسق مع الشاشة */
+  max-width: 45vw !important;
+  z-index: 1 !important; /* يجعل الورد خلف النص */
+  pointer-events: none !important;
+  opacity: 0.85;
+}
+
+/* 2. رفع النص ليكون فوق الورد دائماً */
+.content-wrapper {
+  position: relative !important;
+  z-index: 10 !important; /* ضمان ظهور الكتابة بوضوح فوق أي خلفية */
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+/* 1. ضبط الحاوية الرئيسية لرفع الكلام لأعلى وتوزيع المساحة */
+.countdown-section {
+  position: relative !important;
+  height: 100vh;
+  width: 100%;
+  background-color: #f7f4ef;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important; /* يرفع المحتوى لأعلى */
+  align-items: center !important;
+  padding-top: 6vh !important; /* مسافة بسيطة ومحترمة من فوق */
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box;
+  overflow: hidden !important;
+}
+
+/* 2. حاوية المحتوى النصي */
+.content-wrapper {
+  position: relative !important;
+  z-index: 5 !important; /* إبقاء النص فوق الورد */
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+}
+
+/* 3. تصغير وتثبيت الوردة في الركن السفلي تماماً */
+.side-flower-img {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 130px !important; /* تصغير حجم الوردة عشان متجيش على الكلام */
+  max-width: 35vw !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 0.9;
+}
+/* تثبيت الوردة في الزاوية السفلية الشمال */
+.side-flower-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 125px !important;
+  max-width: 33vw !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 0.9;
+  transform: scaleX(-1); /* يعكس اتجاه الوردة أفقياً لتقعد مظبوطة في الركن الشمال */
+}
+/* 1. تثبيت الوردة بوضعها الطبيعي الأصلي في الركن الشمال تحت */
+.side-flower-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 110px !important; /* حجم مظبوط للوردة */
+  max-width: 28vw !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 0.9;
+  /* بدون أي عكس للاتجاه */
+}
+
+/* 2. تجميع الكلام في المنتصف عشان الوردة تطلع على الشمال براحتها */
+
+
+.welcome-text {
+  font-family: 'Amiri', serif;
+  font-size: 0.95rem !important;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+  padding: 0 10px;
+}
+/* 1. تثبيت الوردة في الركن السفلية الشمال بالدوران المناسب */
+.side-flower-left {
+  position: absolute !important;
+  bottom: -10px !important;
+  left: -10px !important;
+  width: 140px !important;
+  max-width: 38vw !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 0.95;
+  /* دوران وانعكاس لوضع الفروع في اتجاه الداخل تماماً */
+  transform: rotate(90deg) scaleY(-1) !important;
+  transform-origin: bottom left;
+}
+
+/* 2. تجميد عرض النص وتوسيطه لمنع أي تداخل مع فروع الوردة */
+.content-wrapper {
+  position: relative !important;
+  z-index: 5 !important;
+  text-align: center;
+  max-width: 310px !important;
+  width: 100%;
+  margin: 0 auto !important;
+}
+
+.welcome-text {
+  font-family: 'Amiri', serif;
+  font-size: 0.95rem !important;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+  padding: 0 5px;
+}
+/* تثبيت الوردة في الركن الشمال تحت وعكسها أفقياً فقط */
+.side-flower-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 130px !important;
+  max-width: 35vw !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 0.95 !important;
+  
+  /* الضبطة المظبوطة اللي مش هتخفي الصورة */
+  transform: scaleX(-1) !important;
+}
+
+/* ضمان مساحة كافية للكلام في المنتصف */
+.content-wrapper {
+  position: relative !important;
+  z-index: 5 !important;
+  text-align: center;
+  max-width: 310px !important;
+  width: 100%;
+  margin: 0 auto !important;
+}
+.countdown-section {
+  position: relative !important;
+  width: 100%;
+  height: 100vh;
+  background-color: #f7f4ef;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  padding-top: 5vh !important;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* الوردة في الركن الشمال تحت مقلوبة أفقياً بدون ما تطلع بره الشاشة */
+.side-flower-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 130px !important;
+  max-width: 35vw !important;
+  height: auto !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  opacity: 0.95 !important;
+  
+  /* السر هنا: الانعكاس حول منتصف الصورة عشان تفضل جوه الحدود */
+  transform: scaleX(-1) !important;
+  transform-origin: center center !important;
+}
+
+.content-wrapper {
+  position: relative !important;
+  z-index: 5 !important;
+  text-align: center;
+  max-width: 310px !important;
+  width: 100%;
+  margin: 0 auto !important;
+}
+.side-flower-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 130px !important;
+  max-width: 35vw !important;
+  height: auto !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  opacity: 0.95 !important;
+  
+  /* يعكس الوردة أفقياً لتتجه ناحية النص */
+  transform: scaleX(-1) !important;
+}
+.side-flower-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  width: 130px !important;
+  max-width: 35vw !important;
+  height: auto !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  opacity: 0.95 !important;
+  
+  /* إلغاء أي عكس أو دوران تماماً */
+  transform: none !important;
+}
+.side-flower-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  width: 125px !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  transform: none !important; /* بدون عكس */
+}
+/* تغيير خلفية سكشن المكان والقاعة فقط دون التأثير على باقي السكاشن */
+.map-container, 
+section[style*="padding-top: 0"] {
+  background-color: #F9F6EE !important;
+}
+/* موحد لجميع الأقسام */
+
+/* ضبط خلفية الـ footer لتوحيد اللون */
+footer {
+  background-color: #F9F6EE !important;
+  position: relative !important;
+  z-index: 1;
+}
+
+/* رفع باقي عناصر الفوتر فوق الورد */
+footer .footer-rings,
+footer .footer-names,
+footer .subtitle-caps {
+  position: relative;
+  z-index: 5;
+}
+
+/* وردة الزاوية الشمال تحت */
+.footer-flower-left {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 110px !important;
+  max-width: 30vw !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  transform: none !important;
+}
+
+/* وردة الزاوية اليمين تحت */
+.footer-flower-right {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 110px !important;
+  max-width: 30vw !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  transform: scaleX(-1) !important; /* عكس الوردة ليحتضن الفرع الزاوية اليمين */
+}
+    </style>
+</head>
+<body>
+    <audio id="bg-music" loop prelaod="auto">
+    <source src="./Albumaty.Com_hsyn_algsmy_edkhly_amry.mp3" type="audio/mpeg">
+</audio>
+ <!-- Envelope Intro Screen -->
+<div id="envelope-screen" class="envelope-screen" onclick="openInvitation()">
+    <!-- 1. El video elly hy-play lma ndoos (Mkfy wra el sora fl awel) -->
+    <video id="envelope-video" class="env-video" muted playsinline preload="auto">
+        <source src="./goldleaf-offwhite-open.mp4" type="video/mp4">
+    </video>
+    
+    <!-- 2. El sora el thabta (El envelope ma2fool) di elly htban fl awel -->
+    <img id="envelope-static" src="https://wedvite.net/envelopes/goldleaf-offwhite-open-poster.jpg" class="env-bg" alt="Envelope Closed">
+</div>
+    <!-- Audio Button -->
+    <button class="audio-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+    </button>
+
+    <!-- Hero Section (Video Background) -->
+    <section class="hero-video-section">
+        <!-- Background Video -->
+        <video class="bg-video" autoplay loop muted playsinline>
+            <!-- 7oti masar el video bta3ek hena -->
+            <source src="./red.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Dark Overlay -->
+        <div class="video-overlay"></div>
+
+        <div class="hero-content">
+            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ </div>
+            <div class="hero-top-text">We're Getting Married</div>
+            
+             <div class="divider-icon" style="color: #ffffff;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="hero-names gs-reveal"> عبدالعظيم</div>
+            <div class="hero-amp">&</div>
+            <div class="hero-names gs-reveal">لبني</div>
+            
+            <div class="divider-icon" style="color: #ffffff;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            
+            <div class="hero-date">١٢ سبتمبر ٢٠٢٦</div>
+        </div>
+         
+        
+        <div class="scroll-down">
+            <div class="scroll-arrow">↓</div>
+            
+        </div>
+    </section>
+
+<section class="card-section">
+
+    <div class="invitation-container">
+    
+    <!-- كلمة يتشرف -->
+    <h2 class="title-top">يتشرف</h2>
+
+    <!-- أسماء الداعين (الأباء) -->
+    <div class="hosts-container">
+      <div class="host">
+        <span class="label">الحاج</span>
+        <h3 class="host-name font-calligraphy">أنور مناع</h3>
+      </div>
+      <div class="host">
+        <span class="label">الحاج</span>
+        <h3 class="host-name font-calligraphy">سالم سالم</h3>
+      </div>
+    </div>
+
+    <!-- نص المناسبة -->
+    <p class="event-text">بدعوتكم لحضور زفاف نجليهما</p>
+
+    <!-- أسماء العروسين -->
+    <div class="couple-container">
+      <div class="person">
+        <span class="title-prefix">الدكتور</span>
+        <h1 class="name font-calligraphy">عبدالعظيم أنور</h1>
+      </div>
+
+      <div class="ampersand">&</div>
+
+      <div class="person">
+        <span class="title-prefix">الدكتورة</span>
+        <h1 class="name font-calligraphy">لبنى سالم</h1>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- Countdown & Welcome Section -->
+ 
+<section class="countdown-section">
+    <!-- صورة الورد الجانبية الشفافة -->
+    
+
+    <div class="content-wrapper">
+        <img src="data:image/svg+xml;utf8,<svg viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'><path d='M50 10 Q60 0 70 10 T90 10' stroke='%23d8cebe' fill='none'/><circle cx='50' cy='10' r='3' fill='none' stroke='%23d8cebe'/><path d='M50 10 Q40 0 30 10 T10 10' stroke='%23d8cebe' fill='none'/></svg>" class="flower-divider" alt="divider">
+        
+        <h2 class="title-script">Countdown</h2>
+       <div class="subtitle-caps">Until 12 September 2026 &bull; 8:00 PM</div>
+        
+        <div class="countdown-grid">
+            <div class="cd-item"><span class="cd-number" id="days">00</span><span class="cd-label">Days</span></div>
+            <div class="cd-item"><span class="cd-number" id="hours">00</span><span class="cd-label">Hours</span></div>
+            <div class="cd-item"><span class="cd-number" id="minutes">00</span><span class="cd-label">Mins</span></div>
+            <div class="cd-item"><span class="cd-number" id="seconds">00</span><span class="cd-label">Secs</span></div>
+        </div>
+
+        <h2 class="title-arabic">أهلاً بكم </h2>
+        <p class="welcome-text">منذ اللحظة الأولى، علمنا أن قصتنا تستحق الاحتفال. يشرفنا وجودكم معنا ونحن نبدأ هذا الفصل الجديد — محاطين بأكثر الأشخاص الذين نحبهم.</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    
+   
+    
+    <!-- المكان (أورو بلازا) -->
+     <section style="padding-top: 0; background-color: #F9F6EE;"></section>
+    <section style="padding-top: 0;">
+        <img src="./venue-illustration.webp" class="venue-sketch" alt="رسم توضيحي للمكان">
+        <h3 class="venue-name">قاعه إليزيه  </h3>
+        <div class="venue-subtitle">نادي  ٦ اكتوبر  </div>
+        <div style="font-size: 1.2rem; margin-bottom: 20px;">مكان الحفل</div>
+        
+      <div class="map-container" style="position: relative; height: 250px;">
+    <!-- الرابط اللي بيغطي الصورة كلها وبيفتح اللوكيشن -->
+    <a href="https://maps.app.goo.gl/kdaq1td5xVZn9AHo6?g_st=ic"target="_blank" 
+       rel="noopener noreferrer"
+       style="display: block; width: 100%; height: 100%; text-decoration: none; color: inherit; position: relative; z-index: 10;">
+        <!-- النوتة الصغيرة اللي فوق عشان الضيف يفهم إنها بتفتح الخريطة -->
+        <div style="position: absolute; top: 10px; left: 10px; background: white; padding: 8px 12px; border-radius: 4px; font-family: var(--font-sans); font-size: 12px; font-weight: 500; color: #333; box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 10;">
+            اضغط لفتح الموقع ↗
+        </div>
+        
+        <!-- صورة القاعة بتاعتك -->
+        <img src="./photo3.jfif" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: block;" alt="مكان الحفل">
+        
+    </a>
+</div>
+        
+       
+    </section>
+
+   
+
+    
+    
+
+  
+   <!-- التذييل -->
+<footer style="position: relative; overflow: hidden;">
+    <!-- وردة الشمال -->
+    <img src="./photo2.png" class="footer-flower-left" alt="Floral Left">
+
+    <!-- وردة اليمين -->
+    <img src="./photo2.png" class="footer-flower-right" alt="Floral Right">
+
+    <svg class="footer-rings" viewBox="0 0 40 20" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="10" r="8"></circle>
+        <circle cx="28" cy="10" r="8"></circle>
+    </svg>
+    <h2 class="footer-names">عبدالعظيم و لبني</h2>
+    <div class="subtitle-caps" style="margin-top: 10px;">١٢ سبتمبر ٢٠٢٦</div>
+</footer>
+
+    <!-- GSAP for Cinematic Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Subtle entrance animation for Hero text
+        gsap.from(".hero-names", {
+            y: 30,
+            opacity: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power3.out",
+            delay: 0.5
+        });
+
+        // Fade in sections on scroll
+        gsap.utils.toArray('section:not(.hero-video-section)').forEach(section => {
+            gsap.from(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                },
+                y: 40,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power2.out"
+            });
+        });
+        // Set the date we're counting down to (22 November 2026, 5:00 PM)
+const countDownDate = new Date("Aug 8, 2026 17:00:00").getTime();
+
+const x = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in the elements with ids
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    // If the count down is over
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+    }
+}, 1000);
+// E2fely el scroll awel ma el saf7a t-load
+document.body.classList.add('locked');
+
+function openInvitation() {
+    const staticImg = document.getElementById('envelope-static');
+    const video = document.getElementById('envelope-video');
+    const envelopeScreen = document.getElementById('envelope-screen');
+    
+    // 1. Ekhfy el sora el thabta (el poster)
+    staticImg.style.opacity = '0';
+    
+    // 2. Sha3'aly video el envelope w howa bytfte7
+    video.play();
+    
+    // 3. Awel ma el video ykhlas, ekhfy el shasha kolaha w efta7y el scroll
+    video.onended = function() {
+        envelopeScreen.classList.add('hidden');
+        document.body.classList.remove('locked');
+    };
+    
+    // (Backup) law el video fahto tawel aw fih moshkela, nkhfeh b3d 3.5 sawany
+    setTimeout(() => {
+        envelopeScreen.classList.add('hidden');
+        document.body.classList.remove('locked');
+    }, 3500); 
+}
+// امسحي دالة openInvitation القديمة وحطي دي مكانها:
+function openInvitation() {
+    const staticImg = document.getElementById('envelope-static');
+    const video = document.getElementById('envelope-video');
+    const envelopeScreen = document.getElementById('envelope-screen');
+    const bgMusic = document.getElementById('bg-music');
+    
+    // 1. تشغيل الأغنية فوراً مع أول كبسة على الجواب
+    if (bgMusic) {
+        bgMusic.play().catch(error => {
+            console.log("Audio autoplay prevented, waiting for trigger:", error);
+        });
+    }
+    
+    // 2. إخفاء الصورة الثابتة وتشغيل فيديو الـ envelope
+    if (staticImg) staticImg.style.opacity = '0';
+    if (video) video.play();
+    
+    function triggeriPhoneFix() {
+        envelopeScreen.classList.add('hidden');
+        document.body.classList.remove('locked');
+        
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+            window.dispatchEvent(new Event('resize'));
+        }, 100);
+    }
+    
+    if (video) {
+        video.onended = function() {
+            triggeriPhoneFix();
+        };
+    }
+    
+    setTimeout(() => {
+        if (!envelopeScreen.classList.contains('hidden')) {
+            triggeriPhoneFix();
+        }
+    }, 3500); 
+}
+
+// -------------------------------------------------------------
+// كود التحكم في زرار الصوت (كتم / تشغيل) لو الضيف حب يقفلها
+// -------------------------------------------------------------
+const audioBtn = document.querySelector('.audio-btn');
+const bgMusic = document.getElementById('bg-music');
+
+if (audioBtn && bgMusic) {
+    audioBtn.addEventListener('click', () => {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            audioBtn.style.opacity = '1'; // شكل الزرار وهو شغال
+        } else {
+            bgMusic.pause();
+            audioBtn.style.opacity = '0.5'; // شكله وهو مكتوم
+        }
+    });
+}
+const targetDate = new Date("September 12, 2026 20:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+      document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+    } else {
+      // بعد ما الوقت يخلص
+      document.getElementById("days").innerText = "00";
+      document.getElementById("hours").innerText = "00";
+      document.getElementById("minutes").innerText = "00";
+      document.getElementById("seconds").innerText = "00";
+    }
+  }
+
+  // تشغيل الـ Counter فوراً وكل ثانية
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
