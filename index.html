@@ -871,597 +871,1201 @@ html, body {
   
   box-sizing: border-box;
 }
-/* إزالة أي Margins أو Paddings عاملة الحافة البيضاء */
 * {
+
   margin: 0;
+
   padding: 0;
+
   box-sizing: border-box;
+
 }
+
+
 
 body {
+
   width: 100%;
+
   overflow-x: hidden; /* لمنع أي سكرول يمين وشمال في الصفحة كلها */
+
   background-color: #eee7de; /* توحيد الخلفية مع لون كارت الدعوة */
+
 }
+
+
 
 /* السكشن التاني الخاص بكارت الدعوة */
+
 .invitation-section {
+
   width: 100%;
+
   min-height: 100vh; /* ياخد ارتفاع الشاشة بالكامل */
-  
+
+ 
+
   /* الصورة الفرغة كخلفية للسكشن */
+
   background-image: url('./photo1.jpeg');
+
   background-size: cover; /* أو 100% 100% لو حابة يمط للشاشة بالكامل */
+
   background-position: center top;
+
   background-repeat: no-repeat;
+
+
 
   /* محاذاة النصوص داخل السكشن */
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: flex-start;
-  
+
+ 
+
   padding-top: 15vh; /* تظبيط مسافة الكلام جوة العقد */
+
   padding-left: 20px;
+
   padding-right: 20px;
+
   text-align: center;
+
 }
+
 .invitation-section {
+
   width: 100%;
+
   /* تكبير نسبة عرض الصورة لتغطي الحواف بالكامل */
-  background-size: 110% 100%; 
+
+  background-size: 110% 100%;
+
   background-position: center;
+
   background-repeat: no-repeat;
+
 }
+
 /* 1. تصفير الـ Parent المباشر لضمان عدم وجود حواف */
+
 body, main, .wrapper, .container {
+
   width: 100% !important;
+
   max-width: 100% !important;
+
   margin: 0 !important;
+
   padding: 0 !important;
+
 }
+
+
 
 /* 2. تعديل السكشن نفسه ليملأ الشاشة تماماً */
+
 .invitation-section {
+
   width: 100% !important;
+
   min-height: 100vh;
+
   margin: 0 !important;
+
   padding: 0 !important;
-  
+
+ 
+
   background-image: url('./photo1.jpeg');
+
   /* يجبر الخلفية تتمدد وتغطي العرض والارتفاع كاملاً بدون حواف بيج/بيضاء */
-  background-size: 100% 100%; 
+
+  background-size: 100% 100%;
+
   background-position: center;
+
   background-repeat: no-repeat;
 
+
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: flex-start;
+
 }
+
 /* 1. إلغاء أي هوامش من الأب المباشر والـ Div الداخلي */
+
 .invitation-section,
+
 .invitation-section > div {
+
   width: 100% !important;
+
   max-width: 100% !important;
+
   margin: 0 !important;
+
   padding: 0 !important;
+
   box-sizing: border-box !important;
+
 }
+
+
 
 /* 2. تكبير حجم صورة الخلفية لتفرش الشاشة تماماً */
+
 .invitation-section {
+
   min-height: 100vh;
+
   background-image: url('./photo1.jpeg');
+
   background-size: 100% 100% !important; /* أو cover */
+
   background-position: center top;
+
   background-repeat: no-repeat;
+
 }
+
 /* 1. إلغاء الـ padding من السكشن الأب الخاص بالدعوة */
+
 section.card-section {
+
   padding: 0 !important;
+
   width: 100%;
+
   overflow: hidden;
+
 }
+
+
 
 /* 2. ضبط الـ Container بالاسم الصح المطابق للـ HTML */
+
 .invitation-container {
+
   width: 100% !important;
+
   min-height: 100vh;
+
   background-image: url('./photo1.jpeg');
+
   background-size: 100% 100% !important; /* يمط الخلفية لتغطي كامل العرض والارتفاع */
+
   background-position: center top;
+
   background-repeat: no-repeat;
 
+
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: flex-start;
 
+
+
   padding-top: 18vh;
+
   padding-left: 20px;
+
   padding-right: 20px;
+
   box-sizing: border-box;
+
 }
+
 /* 1. ضبط المسافة الخارجية الشاملة داخل القوس */
+
 .invitation-container {
+
   padding-top: 13vh !important;   /* ينزل "يتشرف" مسافة مريحة تحت الورد العلوي */
+
   padding-bottom: 6vh !important; /* يضمن مسافة متناسقة فوق القاعدة والورد السفلي */
+
   justify-content: flex-start !important;
+
 }
+
+
 
 /* 2. توزيع المسافات بين أجزاء النص بالتساوي */
+
 .title-top {
+
   font-size: 1.8rem;
+
   margin-bottom: 2.5vh !important; /* مسافة متناسقة تحت يتشرف */
+
 }
 
+
+
 .hosts-container {
+
   margin-bottom: 2.5vh !important; /* مسافة تحت أسماء الآباء */
+
 }
+
+
 
 .host .host-name {
+
   font-size: 1.5rem;
+
 }
 
+
+
 .event-text {
+
   font-size: 1.1rem;
+
   margin-bottom: 3vh !important; /* مسافة بين "بدعوتكم" وبين أسماء العروسين */
+
 }
+
+
 
 /* 3. ضبط كارت العروسين */
+
 .couple-container {
+
   gap: 0.8vh !important;
+
 }
+
+
 
 .couple-container .name {
+
   font-size: 2.1rem;
+
   line-height: 1.15;
+
 }
 
+
+
 .ampersand {
+
   font-size: 1.5rem;
+
   margin: 0.5vh 0 !important;
+
 }
+
 /* 1. تطبيق خط الرقعة الفخم على كلمة "يتشرف" */
+
 .title-top {
+
   font-family: 'Aref Ruqaa', serif !important;
+
   font-size: 2.2rem !important;
+
   font-weight: 700;
+
   color: #2c2c2c;
+
   margin-bottom: 2vh !important;
+
 }
+
+
 
 /* 2. إبراز علامة (&) بخط لاتيني كلاسيكي ولون ذهبي أنيق */
+
 .ampersand {
+
   font-family: 'Playfair Display', 'Cormorant Garamond', 'Georgia', serif !important;
+
   font-style: italic;
+
   font-size: 2.2rem !important;
+
   color: #a68966 !important; /* لون ذهبي/بني ناعم ومميز */
+
   font-weight: 600;
+
   margin: 0.8vh 0 !important;
+
   line-height: 1;
+
 }
+
+
 
 /* 3. إبعاد كلمة "الدكتور / الدكتورة" عن الأسماء لمنع الالتصاق */
+
 .title-prefix {
+
   display: block !important;
+
   font-size: 1.15rem;
+
   color: #4a4a4a;
+
   margin-bottom: 6px !important; /* المسافة بين الدكتور والاسم */
+
 }
+
+
 
 .couple-container .name {
+
   font-size: 2.1rem;
+
   line-height: 1.2;
+
 }
+
 /* 1. رفع الحافة السفلية للحاوية لرفع اسم العروسة تلقائياً */
+
 .invitation-container {
+
   padding-top: 11vh !important;
+
   padding-bottom: 10vh !important; /* رفعت اسم العروسة لفوق عن القاعدة */
+
 }
+
+
 
 /* 2. تقليل المسافات الرأسية البينية لضغط الكلام في منتصف القوس */
+
 .title-top {
+
   margin-bottom: 1.5vh !important;
+
 }
+
+
 
 .hosts-container {
+
   margin-bottom: 1.5vh !important;
+
 }
+
+
 
 .event-text {
+
   margin-bottom: 1.5vh !important;
+
 }
+
+
 
 /* 3. تقليل المسافة حول علامة (&) */
+
 .ampersand {
+
   margin: 0.3vh 0 !important;
+
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,500;1,400&family=Montserrat:wght@300;400&display=swap');
 
+
+
 .countdown-section {
+
   position: relative;
+
   height: 100vh;
+
   width: 100%;
+
   background-color: #f7f4ef;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   overflow: hidden;
+
   box-sizing: border-box;
+
   padding: 20px;
+
 }
+
+
 
 /* صورة الورد الجانبية المصممة لتجلس في الزاوية بأناقة */
+
 .side-flower-img {
+
   position: absolute;
+
   bottom: -10px;
+
   right: -10px;
+
   width: 180px; /* يمكن تعديل الحجم حسب تصميم الوردة */
+
   max-width: 45vw;
+
   pointer-events: none;
+
   z-index: 1;
+
   opacity: 0.9;
+
 }
 
+
+
 .content-wrapper {
+
   position: relative;
+
   z-index: 2;
+
   text-align: center;
+
   max-width: 420px;
+
   width: 100%;
+
 }
+
+
 
 .flower-divider {
+
   width: 120px;
+
   margin-bottom: 1vh;
+
 }
+
+
 
 .title-script {
+
   font-family: 'Playfair Display', serif;
+
   font-style: italic;
+
   font-size: 2.2rem;
+
   color: #8a6d48;
+
   margin: 0;
+
 }
+
+
 
 .subtitle-caps {
+
   font-family: 'Montserrat', sans-serif;
+
   font-size: 0.8rem;
+
   letter-spacing: 1.5px;
+
   text-transform: uppercase;
+
   color: #7a6855; /* لون بني ذهبي هادئ */
+
   font-weight: 500;
+
   margin-top: 6px;
+
   margin-bottom: 2.5vh;
+
 }
+
+
 
 /* تصميم كروت الأرقام الزجاجية */
+
 .countdown-grid {
+
   display: flex;
+
   justify-content: center;
+
   gap: 12px;
+
   margin-bottom: 3.5vh;
+
 }
+
+
 
 .cd-item {
+
   background: rgba(255, 255, 255, 0.7);
+
   backdrop-filter: blur(8px);
+
   border: 1px solid rgba(166, 137, 102, 0.25);
+
   border-radius: 12px;
+
   padding: 12px 8px;
+
   min-width: 60px;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+
 }
+
+
 
 .cd-number {
+
   font-family: 'Playfair Display', serif;
+
   font-size: 1.6rem;
+
   font-weight: 500;
+
   color: #2c2c2c;
+
   line-height: 1;
+
 }
+
+
 
 .cd-label {
+
   font-family: 'Montserrat', sans-serif;
+
   font-size: 0.65rem;
+
   color: #8a6d48;
+
   margin-top: 6px;
+
   letter-spacing: 1px;
+
 }
+
+
 
 .title-arabic {
+
   font-family: 'Amiri', serif;
+
   font-size: 1.9rem;
+
   color: #1a1a1a;
+
   margin-bottom: 1vh;
+
 }
+
+
 
 .welcome-text {
+
   font-family: 'Amiri', serif;
+
   font-size: 1.05rem;
+
   line-height: 1.7;
+
   color: #555;
+
   margin: 0;
+
   padding: 0 10px;
+
 }
+
 /* 1. إرسال الصورة خلف جميع النصوص وتثبيتها أسفل اليمين */
+
 .side-flower-img {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   right: 0 !important;
+
   width: 170px !important; /* حجم متناسق مع الشاشة */
+
   max-width: 45vw !important;
+
   z-index: 1 !important; /* يجعل الورد خلف النص */
+
   pointer-events: none !important;
+
   opacity: 0.85;
+
 }
+
+
 
 /* 2. رفع النص ليكون فوق الورد دائماً */
+
 .content-wrapper {
+
   position: relative !important;
+
   z-index: 10 !important; /* ضمان ظهور الكتابة بوضوح فوق أي خلفية */
+
   text-align: center;
+
   max-width: 400px;
+
   width: 100%;
+
 }
+
 /* 1. ضبط الحاوية الرئيسية لرفع الكلام لأعلى وتوزيع المساحة */
+
 .countdown-section {
+
   position: relative !important;
+
   height: 100vh;
+
   width: 100%;
+
   background-color: #f7f4ef;
+
   display: flex !important;
+
   flex-direction: column !important;
+
   justify-content: flex-start !important; /* يرفع المحتوى لأعلى */
+
   align-items: center !important;
+
   padding-top: 6vh !important; /* مسافة بسيطة ومحترمة من فوق */
+
   padding-left: 20px !important;
+
   padding-right: 20px !important;
+
   box-sizing: border-box;
+
   overflow: hidden !important;
+
 }
+
+
 
 /* 2. حاوية المحتوى النصي */
+
 .content-wrapper {
+
   position: relative !important;
+
   z-index: 5 !important; /* إبقاء النص فوق الورد */
+
   text-align: center;
+
   max-width: 380px;
+
   width: 100%;
+
 }
 
+
+
 /* 3. تصغير وتثبيت الوردة في الركن السفلي تماماً */
+
 .side-flower-img {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   right: 0 !important;
+
   width: 130px !important; /* تصغير حجم الوردة عشان متجيش على الكلام */
+
   max-width: 35vw !important;
+
   z-index: 1 !important;
+
   pointer-events: none !important;
+
   opacity: 0.9;
+
 }
+
 /* تثبيت الوردة في الزاوية السفلية الشمال */
+
 .side-flower-left {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   left: 0 !important;
+
   width: 125px !important;
+
   max-width: 33vw !important;
+
   z-index: 1 !important;
+
   pointer-events: none !important;
+
   opacity: 0.9;
+
   transform: scaleX(-1); /* يعكس اتجاه الوردة أفقياً لتقعد مظبوطة في الركن الشمال */
+
 }
+
 /* 1. تثبيت الوردة بوضعها الطبيعي الأصلي في الركن الشمال تحت */
+
 .side-flower-left {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   left: 0 !important;
+
   width: 110px !important; /* حجم مظبوط للوردة */
+
   max-width: 28vw !important;
+
   z-index: 1 !important;
+
   pointer-events: none !important;
+
   opacity: 0.9;
+
   /* بدون أي عكس للاتجاه */
+
 }
+
+
 
 /* 2. تجميع الكلام في المنتصف عشان الوردة تطلع على الشمال براحتها */
 
 
+
+
+
 .welcome-text {
+
   font-family: 'Amiri', serif;
+
   font-size: 0.95rem !important;
+
   line-height: 1.6;
+
   color: #555;
+
   margin: 0;
+
   padding: 0 10px;
+
 }
+
 /* 1. تثبيت الوردة في الركن السفلية الشمال بالدوران المناسب */
+
 .side-flower-left {
+
   position: absolute !important;
+
   bottom: -10px !important;
+
   left: -10px !important;
+
   width: 140px !important;
+
   max-width: 38vw !important;
+
   z-index: 1 !important;
+
   pointer-events: none !important;
+
   opacity: 0.95;
+
   /* دوران وانعكاس لوضع الفروع في اتجاه الداخل تماماً */
+
   transform: rotate(90deg) scaleY(-1) !important;
+
   transform-origin: bottom left;
+
 }
+
+
 
 /* 2. تجميد عرض النص وتوسيطه لمنع أي تداخل مع فروع الوردة */
+
 .content-wrapper {
+
   position: relative !important;
+
   z-index: 5 !important;
+
   text-align: center;
+
   max-width: 310px !important;
+
   width: 100%;
+
   margin: 0 auto !important;
+
 }
+
+
 
 .welcome-text {
+
   font-family: 'Amiri', serif;
+
   font-size: 0.95rem !important;
+
   line-height: 1.6;
+
   color: #555;
+
   margin: 0;
+
   padding: 0 5px;
+
 }
+
 /* تثبيت الوردة في الركن الشمال تحت وعكسها أفقياً فقط */
+
 .side-flower-left {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   left: 0 !important;
+
   width: 130px !important;
+
   max-width: 35vw !important;
+
   z-index: 1 !important;
+
   pointer-events: none !important;
+
   opacity: 0.95 !important;
-  
+
+ 
+
   /* الضبطة المظبوطة اللي مش هتخفي الصورة */
+
   transform: scaleX(-1) !important;
+
 }
+
+
 
 /* ضمان مساحة كافية للكلام في المنتصف */
+
 .content-wrapper {
+
   position: relative !important;
+
   z-index: 5 !important;
+
   text-align: center;
+
   max-width: 310px !important;
+
   width: 100%;
+
   margin: 0 auto !important;
+
 }
+
 .countdown-section {
+
   position: relative !important;
+
   width: 100%;
+
   height: 100vh;
+
   background-color: #f7f4ef;
+
   display: flex !important;
+
   flex-direction: column !important;
+
   justify-content: flex-start !important;
+
   align-items: center !important;
+
   padding-top: 5vh !important;
+
   box-sizing: border-box;
+
   overflow: hidden;
+
 }
+
+
 
 /* الوردة في الركن الشمال تحت مقلوبة أفقياً بدون ما تطلع بره الشاشة */
+
 .side-flower-left {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   left: 0 !important;
+
   width: 130px !important;
+
   max-width: 35vw !important;
+
   height: auto !important;
+
   z-index: 2 !important;
+
   pointer-events: none !important;
+
   opacity: 0.95 !important;
-  
+
+ 
+
   /* السر هنا: الانعكاس حول منتصف الصورة عشان تفضل جوه الحدود */
+
   transform: scaleX(-1) !important;
+
   transform-origin: center center !important;
+
 }
+
+
 
 .content-wrapper {
+
   position: relative !important;
+
   z-index: 5 !important;
+
   text-align: center;
+
   max-width: 310px !important;
+
   width: 100%;
+
   margin: 0 auto !important;
+
 }
+
 .side-flower-left {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   left: 0 !important;
+
   width: 130px !important;
+
   max-width: 35vw !important;
+
   height: auto !important;
+
   z-index: 2 !important;
+
   pointer-events: none !important;
+
   opacity: 0.95 !important;
-  
+
+ 
+
   /* يعكس الوردة أفقياً لتتجه ناحية النص */
+
   transform: scaleX(-1) !important;
+
 }
+
 .side-flower-left {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   right: 0 !important;
+
   left: auto !important;
+
   width: 130px !important;
+
   max-width: 35vw !important;
+
   height: auto !important;
+
   z-index: 2 !important;
+
   pointer-events: none !important;
+
   opacity: 0.95 !important;
-  
+
+ 
+
   /* إلغاء أي عكس أو دوران تماماً */
+
   transform: none !important;
+
 }
+
 .side-flower-left {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   left: 0 !important;
+
   right: auto !important;
+
   width: 125px !important;
+
   z-index: 2 !important;
+
   pointer-events: none !important;
+
   transform: none !important; /* بدون عكس */
+
 }
+
 /* تغيير خلفية سكشن المكان والقاعة فقط دون التأثير على باقي السكاشن */
-.map-container, 
+
+.map-container,
+
 section[style*="padding-top: 0"] {
+
   background-color: #F9F6EE !important;
+
 }
+
 /* موحد لجميع الأقسام */
 
+
+
 /* ضبط خلفية الـ footer لتوحيد اللون */
+
 footer {
+
   background-color: #F9F6EE !important;
+
   position: relative !important;
+
   z-index: 1;
+
 }
+
+
 
 /* رفع باقي عناصر الفوتر فوق الورد */
+
 footer .footer-rings,
+
 footer .footer-names,
+
 footer .subtitle-caps {
+
   position: relative;
+
   z-index: 5;
+
 }
+
+
 
 /* وردة الزاوية الشمال تحت */
+
 .footer-flower-left {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   left: 0 !important;
+
   width: 110px !important;
+
   max-width: 30vw !important;
+
   z-index: 2 !important;
+
   pointer-events: none !important;
+
   transform: none !important;
+
 }
 
+
+
 /* وردة الزاوية اليمين تحت */
+
 .footer-flower-right {
+
   position: absolute !important;
+
   bottom: 0 !important;
+
   right: 0 !important;
+
   width: 110px !important;
+
   max-width: 30vw !important;
+
   z-index: 2 !important;
+
   pointer-events: none !important;
+
   transform: scaleX(-1) !important; /* عكس الوردة ليحتضن الفرع الزاوية اليمين */
+
 }
+body {
+  overflow-y: auto;
+  overflow-x: hidden; /* لمنع السكرول العرضي فقط */
+}
+body {
+  min-height: 100vh;
+}
+html, body {
+  touch-action: manipulation; /* أو auto */
+}
+
+
+
+
+
+    </style>
     </style>
 </head>
 <body>
