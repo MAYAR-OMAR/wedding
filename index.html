@@ -2066,34 +2066,27 @@ html, body {
   height: auto !important;
 }
 
-/* ظبط توزيع الكلام جوه القوس على الموبايل */
+/* لم الكلام في منتصف القوس بنفس نسبة أبعاد اللابتوب */
 .invitation-container {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: space-between !important; /* يوزع العناصر بالطول داخل القوس */
+  justify-content: center !important; /* يجمع الكلام في منتصف القوس */
   align-items: center !important;
-  padding-top: 10vh !important;    /* مسافة مناسبة تحت الورد اللي فوق */
-  padding-bottom: 13vh !important; /* يرفع اسم العروسة فوق السلالم والورد اللي تحت */
-  box-sizing: border-box !important;
+  gap: 10px !important;               /* مسافة بينية متناسقة بين الأسطر */
+  padding-top: 10vh !important;       /* يضمن بداية الكلام تحت أعلى القوس */
+  padding-bottom: 12vh !important;    /* يضمن عدم تداخل اسم العروسة مع الورد الأسفل */
+  background-size: cover !important;  /* يمنع مط صورة العقد ويحافظ على أبعادها الأصليّة */
+  background-position: center !important;
 }
 
-/* توزيع مسافات الأسطر بانسجام */
-.title-top {
-  margin-bottom: 1.5vh !important;
-}
-
-.hosts-container {
-  margin-bottom: 1.5vh !important;
-}
-
-.event-text {
-  margin-bottom: 1.5vh !important;
-}
-
+/* إلغاء المسافات الخارجية الكبيرة بين العناصر */
+.title-top, 
+.hosts-container, 
+.event-text, 
 .couple-container {
-  margin-top: 1vh !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
-
     </style>
     </style>
 </head>
