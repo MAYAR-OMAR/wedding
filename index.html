@@ -2143,6 +2143,112 @@ html, body {
   align-items: center !important;
   gap: 20px !important;             /* مسافة ثابتة ومضبوطة بين العداد والنص والقصر */
 }
+
+/* تجميع الأسماء للداخل بدل ما يروحوا للحواف */
+/* رفع الكلام فقط للأعلى داخل الصورة */
+.title-top {
+  margin-top: -35px !important; /* رفع "يتشرف" لفوق نحو القوس */
+  margin-bottom: 25px !important;
+}
+
+/* تضييق عرض المحتوى عشان الكلام ما يلمسش حواف الصورة والورد */
+.invitation-container {
+  padding: 0 50px !important; /* padding جانبي قوي لضمان ابتعاد النص عن الجوانب */
+  box-sizing: border-box;
+}
+
+.hosts-container,
+.couple-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  gap: 35px !important; /* مسافة متوسطة بين الاسمين */
+  width: 100% !important;
+  direction: rtl !important;
+}
+
+.host,
+.person {
+  flex: 1 !important;
+  text-align: center !important;
+}
+
+/* تنسيق الدعاء في الجزء السفلي بمسافات آمنة */
+.prayer-section {
+  margin-top: 30px !important;
+  text-align: center;
+  width: 75% !important; /* يمنع الكلام إنه يوصل للجوانب */
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.prayer-line {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.prayer-line.highlight {
+  font-size: 1.05rem;
+  color: #333;
+  font-weight: 500;
+}
+
+
+
+/* 1. حل مشكلة اقتصاص الصورة من الأعلى */
+.card-section {
+  overflow: hidden; /* يمنع خروج المحتوى برة إطار الكارت */
+}
+
+.invitation-container {
+  padding-top: 40px !important; /* بديل عن margin بالسالب لمنع قطع الصورة */
+  box-sizing: border-box;
+}
+
+/* رفع كلمة يتشرف بـ Transform بدلاً من Margin بالسالب */
+.title-top {
+  transform: translateY(-20px) !important;
+  margin-bottom: 15px !important;
+}
+
+/* 2. حل مشكلة تداخل اسم عبدالعظيم والدعاء مع الحواف والورد */
+.couple-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  max-width: 65% !important; /* تضييق المساحة المتاحة للأسماء لجعلهم في المنتصف تماماً */
+  margin: 0 auto !important;
+  gap: 15px !important;
+  direction: rtl !important;
+}
+
+.couple-container .person {
+  flex: 1 !important;
+  text-align: center !important;
+  white-space: nowrap !important; /* يمنع نزول حروف الاسم تحت بعض */
+}
+
+/* تصغير حجم خط الأسماء الكبيرة تكة بسيطة عشان تتناسب مع المساحة */
+.couple-container .name {
+  font-size: 1.8rem !important; /* صغري القيمة دي لـ 1.6rem لو حسيتيه لسة عريض */
+}
+
+/* تجميع الدعاء في المنتصف بعيداً عن الفروع */
+.prayer-section {
+  max-width: 60% !important;
+  margin: 20px auto 0 auto !important;
+  text-align: center;
+}
+
+.prayer-line {
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+  word-wrap: break-word;
+}
+
     </style>
     </style>
 </head>
@@ -2201,9 +2307,13 @@ html, body {
         </div>
     </section>
 
-<section class="card-section">
 
-    <div class="invitation-container">
+
+
+
+
+<section class="card-section">
+  <div class="invitation-container">
     
     <!-- كلمة يتشرف -->
     <h2 class="title-top">يتشرف</h2>
@@ -2211,8 +2321,8 @@ html, body {
     <!-- أسماء الداعين (الأباء) -->
     <div class="hosts-container">
       <div class="host">
-        <span class="label">الحاج</span>
-        <h3 class="host-name font-calligraphy">أنور مناع</h3>
+        <span class="label">المهندس</span>
+        <h3 class="host-name font-calligraphy">انور مناع</h3>
       </div>
       <div class="host">
         <span class="label">الحاج</span>
@@ -2227,24 +2337,22 @@ html, body {
     <div class="couple-container">
       <div class="person">
         <span class="title-prefix">الدكتور</span>
-        <h1 class="name font-calligraphy">عبدالعظيم أنور</h1>
+        <h1 class="name font-calligraphy">عبدالعظيم</h1>
       </div>
-
-      <div class="ampersand">&</div>
-
       <div class="person">
         <span class="title-prefix">الدكتورة</span>
-        <h1 class="name font-calligraphy">لبنى سالم</h1>
+        <h1 class="name font-calligraphy">لبنى</h1>
       </div>
     </div>
 
+    <!-- الدعاء مقسم لسطرين مع حفظ المساحة الجانبية -->
+    <div class="prayer-section">
+      <p class="prayer-line">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا"</p>
+      <p class="prayer-line highlight">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
+    </div>
+
   </div>
-
-
 </section>
-
-
-
 
 
 <!-- Countdown & Welcome Section -->
