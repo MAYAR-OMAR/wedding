@@ -2249,6 +2249,85 @@ html, body {
   word-wrap: break-word;
 }
 
+.single-memory-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.std-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: #8c8275;
+  margin-bottom: 5px;
+}
+
+.std-date {
+  font-size: 1.6rem;
+  font-family: serif;
+  color: #4a443c;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.single-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-photo {
+  width: 220px; /* تقدري تتحكمي في كبر وصغر الصورة من هنا */
+  height: auto;
+  object-fit: contain;
+  /* drop-shadow خفيف جداً يبرز إطار الصورة بدون تشويه خلفيتها الشفافة */
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.08)); 
+}
+.single-memory-wrapper {
+  text-align: center;
+  margin-bottom: 0 !important; /* إلغاء المارجن السكبي */
+}
+
+/* إظهار وتنسيق Save The Date */
+.std-subtitle {
+  display: block !important;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: #8c8275;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.std-date {
+  display: block !important;
+  font-size: 1.5rem;
+  font-family: serif;
+  color: #4a443c;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.single-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: -40px !important; /* مارجن بالسالب لإلغاء الفراغ الشفاف اللي جوه الصورة */
+}
+
+.hero-photo {
+  width: 200px; /* تصغير طفيف للحجم لتوفير مساحة رأسيّة */
+  height: auto;
+  object-fit: contain;
+  margin-top: -10px;
+}
+
+/* تضييق المسافة بين الـ Divider والـ Countdown */
+.flower-divider {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
     </style>
     </style>
 </head>
@@ -2356,16 +2435,24 @@ html, body {
 
 
 <!-- Countdown & Welcome Section -->
- 
 <section class="countdown-section">
-    <!-- صورة الورد الجانبية الشفافة -->
-    
-
     <div class="content-wrapper">
+        
+        <!-- سيكشن الصورة الواحدة الجاهزة -->
+        <div class="single-memory-wrapper">
+            <span class="std-subtitle">SAVE THE DATE</span>
+            <div class="std-date">2026 . 09 . 12</div>
+            
+            <div class="single-photo-container">
+                <img src="./brideandgroom.png" alt="صورة العروسين" class="hero-photo">
+            </div>
+        </div>
+
+        <!-- باقي الكود الأصلي بدون أي تعديل -->
         <img src="data:image/svg+xml;utf8,<svg viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'><path d='M50 10 Q60 0 70 10 T90 10' stroke='%23d8cebe' fill='none'/><circle cx='50' cy='10' r='3' fill='none' stroke='%23d8cebe'/><path d='M50 10 Q40 0 30 10 T10 10' stroke='%23d8cebe' fill='none'/></svg>" class="flower-divider" alt="divider">
         
         <h2 class="title-script">Countdown</h2>
-       <div class="subtitle-caps">Until 12 September 2026 &bull; 8:00 PM</div>
+        <div class="subtitle-caps">Until 12 September 2026 &bull; 8:00 PM</div>
         
         <div class="countdown-grid">
             <div class="cd-item"><span class="cd-number" id="days">00</span><span class="cd-label">Days</span></div>
