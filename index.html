@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 
-  
+
    <style>
         :root {
             --bg-color: #f5f4f0;
@@ -2328,6 +2328,92 @@ html, body {
   margin-top: 0 !important;
   margin-bottom: 10px !important;
 }
+/* استدعاء خط عربي أنيق وواضح (مثلاً Tajawal) */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap');
+
+/* 1. الألقاب: المهندس / الحاج / الدكتور / الدكتورة */
+.card-section .label {
+  font-family: 'Tajawal', sans-serif !important;
+  font-weight: 700 !important; /* عريض */
+}
+
+/* 2. جملة: بدعوتكم لحضور زفاف نجليهما */
+.card-section .invitation-text {
+  font-family: 'Tajawal', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* 3. الآية الكريمة وجملة مباركة الزواج */
+.card-section .quran-verse,
+.card-section .blessing-text {
+  font-family: 'Tajawal', sans-serif !important;
+  font-weight: 700 !important;
+}
+/* 1. استدعاء خط عربي أنيق وعريض (مثل Cairo) */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&display=swap');
+
+/* 2. تغيير خط الألقاب (المهندس / الحاج) وتخليها Bold */
+.invitation-container .hosts-container .label {
+  font-family: 'Cairo', sans-serif !important;
+  font-weight: 800 !important;
+}
+
+/* 3. في حال كان باقي العناصر (بدعوتكم / الألقاب المتبقية / الآية) مأخوذة من عناصر p أو div داخل الحاوية */
+.invitation-container p,
+.invitation-container div:not(.hosts-container):not(.host) {
+  font-family: 'Cairo', sans-serif !important;
+  font-weight: 800 !important;
+}
+/* 1. استدعاء خط Cairo عريض (Bold) */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&display=swap');
+
+/* 2. تطبيق الخط والـ Bold على الكلاسات المطلوبة فقط */
+.card-section .label,
+.card-section .event-text,
+.card-section .title-prefix,
+.card-section .prayer-line {
+  font-family: 'Cairo', sans-serif !important;
+  font-weight: 800 !important;
+}
+/* استدعاء خط Amiri و Alexandria لنتائج ممتازة مع التشكيل */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@700;800&family=Amiri:ital,wght@0,700;1,700&display=swap');
+
+/* 1. استدعاء خط Tajawal المميز للكروت */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;900&display=swap');
+
+/* 2. تحديد هوامش الحاوية للداخل عشان الكلام ما يلمسش الورد نهائياً */
+.card-section .invitation-container {
+  padding: 0 40px !important;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 3. رفع كلمة يتشرف لفوق */
+.card-section .title-top {
+  margin-top: -15px !important;
+  margin-bottom: 25px !important;
+}
+
+/* 4. تطبيق الخط العريض (Bold) الموحد وتظبيط المسافات */
+.card-section .label,
+.card-section .event-text,
+.card-section .title-prefix,
+.card-section .prayer-line {
+  font-family: 'Tajawal', sans-serif !important;
+  font-weight: 800 !important;
+  color: #222;
+}
+
+/* تظبيط حجم ومسافات أسطر الآية والدعاء */
+.card-section .prayer-section {
+  margin-top: 15px;
+}
+
+.card-section .prayer-line {
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  margin: 4px 0 !important;
+}
     </style>
     </style>
 </head>
@@ -2434,6 +2520,52 @@ html, body {
 </section>
 
 
+
+<section class="card-section">
+  <div class="invitation-container">
+    
+    <!-- كلمة يتشرف -->
+    <h2 class="title-top">يتشرف</h2>
+
+    <!-- أسماء الداعين (الأباء) -->
+    <div class="hosts-container">
+      <div class="host">
+        <span class="label">المهندس</span>
+        <h3 class="host-name font-calligraphy">انور مناع</h3>
+      </div>
+      <div class="host">
+        <span class="label">الحاج</span>
+        <h3 class="host-name font-calligraphy">سالم سالم</h3>
+      </div>
+    </div>
+
+    <!-- نص المناسبة -->
+    <p class="event-text">بدعوتكم لحضور زفاف نجليهما</p>
+
+    <!-- أسماء العروسين -->
+    <div class="couple-container">
+      <div class="person">
+        <span class="title-prefix">الدكتور</span>
+        <h1 class="name font-calligraphy">عبدالعظيم</h1>
+      </div>
+      <div class="person">
+        <span class="title-prefix">الدكتورة</span>
+        <h1 class="name font-calligraphy">لبنى</h1>
+      </div>
+    </div>
+
+    <!-- الدعاء مقسم لـ 4 أسطر عشان يظبط الفريم -->
+    <div class="prayer-section">
+      <p class="prayer-line">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم</p>
+      <p class="prayer-line">مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا"</p>
+      <p class="prayer-line highlight">بارك الله لهما وبارك عليهما</p>
+      <p class="prayer-line highlight">وجعل بينهما مودة ورحمة</p>
+    </div>
+
+  </div>
+</section>
+
+
 <!-- Countdown & Welcome Section -->
 <section class="countdown-section">
     <div class="content-wrapper">
@@ -2524,7 +2656,7 @@ html, body {
         <circle cx="12" cy="10" r="8"></circle>
         <circle cx="28" cy="10" r="8"></circle>
     </svg>
-    <h2 class="footer-names">عبدالعظيم و لبني</h2>
+    <h2 class="footer-names">ع و ل</h2>
     <div class="subtitle-caps" style="margin-top: 10px;">١٢ سبتمبر ٢٠٢٦</div>
 </footer>
 
