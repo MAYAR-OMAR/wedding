@@ -2349,70 +2349,154 @@ html, body {
   font-family: 'Tajawal', sans-serif !important;
   font-weight: 700 !important;
 }
-/* 1. استدعاء خط عربي أنيق وعريض (مثل Cairo) */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&display=swap');
-
-/* 2. تغيير خط الألقاب (المهندس / الحاج) وتخليها Bold */
-.invitation-container .hosts-container .label {
-  font-family: 'Cairo', sans-serif !important;
-  font-weight: 800 !important;
+/* توحيد حجم ألقاب العروسين مع ألقاب الآباء */
+.title-prefix, .label {
+  font-size: 1rem; /* أضبطي المقاس المناسب للتصميم */
+  font-weight: normal;
+  color: #555;
+  display: block;
+  margin-bottom: 4px;
 }
 
-/* 3. في حال كان باقي العناصر (بدعوتكم / الألقاب المتبقية / الآية) مأخوذة من عناصر p أو div داخل الحاوية */
-.invitation-container p,
-.invitation-container div:not(.hosts-container):not(.host) {
-  font-family: 'Cairo', sans-serif !important;
-  font-weight: 800 !important;
-}
-/* 1. استدعاء خط Cairo عريض (Bold) */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&display=swap');
-
-/* 2. تطبيق الخط والـ Bold على الكلاسات المطلوبة فقط */
-.card-section .label,
-.card-section .event-text,
-.card-section .title-prefix,
-.card-section .prayer-line {
-  font-family: 'Cairo', sans-serif !important;
-  font-weight: 800 !important;
-}
-/* استدعاء خط Amiri و Alexandria لنتائج ممتازة مع التشكيل */
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@700;800&family=Amiri:ital,wght@0,700;1,700&display=swap');
-
-/* 1. استدعاء خط Tajawal المميز للكروت */
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;900&display=swap');
-
-/* 2. تحديد هوامش الحاوية للداخل عشان الكلام ما يلمسش الورد نهائياً */
-.card-section .invitation-container {
-  padding: 0 40px !important;
-  box-sizing: border-box;
-  text-align: center;
+/* تنسيق حاوية العروسين لتكون العناصر بجانب بعضها مع حرف و */
+.couple-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* 3. رفع كلمة يتشرف لفوق */
-.card-section .title-top {
-  margin-top: -15px !important;
-  margin-bottom: 25px !important;
+/* تنسيق حرف "و" بين الاسمين بنفس خط الأسماء */
+.and-symbol {
+  font-size: 1.8rem;
+  margin: 0 5px;
+  align-self: center;
 }
 
-/* 4. تطبيق الخط العريض (Bold) الموحد وتظبيط المسافات */
-.card-section .label,
-.card-section .event-text,
-.card-section .title-prefix,
-.card-section .prayer-line {
-  font-family: 'Tajawal', sans-serif !important;
-  font-weight: 800 !important;
-  color: #222;
+/* التأكد من أن جملة البركة تظل في سطر واحد بدون التفاف */
+.prayer-line.single-line {
+  white-space: nowrap;
+}
+/* توحيد المسافات لكل عناصر الأسماء والألقاب */
+.host, .person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* تظبيط حجم ومسافات أسطر الآية والدعاء */
-.card-section .prayer-section {
-  margin-top: 15px;
+/* ضبط المسافة بين اللقب والاسم فوق وتحت بنفس المقدار */
+.title-prefix, .label {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 4px; /* تحكمي في القيمة دي لو حابة تزودي أو تقللي المسافة بشكل دقيق */
+  line-height: 1.2;
 }
 
-.card-section .prayer-line {
-  font-size: 0.95rem !important;
-  line-height: 1.5 !important;
-  margin: 4px 0 !important;
+/* توسيع المسافة فوق قسم العروسين بالكامل لعدم التداخل */
+.couple-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px; /* بيزود المسافة بين "بدعوتكم..." والعنصر اللي تحته */
+}
+
+/* تنزيل الأسماء نفسها لتحت عن اللقب بطريقة مضمونة */
+.couple-container .name {
+  margin-top: 12px !important; /* بيزق الاسم لتحت ويبعده عن كلمة الدكتور/الدكتورة */
+  line-height: 1.4;
+}
+
+/* توحيد تنسيق الألقاب */
+.title-prefix, .label {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #555;
+  display: block;
+}
+
+/* محاذاة حرف و في المنتصف تماماً */
+.and-symbol {
+  font-size: 1.8rem;
+  margin: 0 5px;
+  align-self: center;
+  padding-top: 15px; /* عشان ينزل يتماشى مع مستوى الأسماء بعد تنزيلها */
+}
+
+/* منع التفاف سطر البركة */
+.prayer-line.single-line {
+  white-space: nowrap;
+}
+/* توحيد الخط والحجم واللون لجميع الألقاب (المهندس، الحاج، الدكتور، الدكتورة) */
+.title-prefix, 
+.label {
+  font-family: inherit; /* أو اسم الخط الخاص بالنصوص العادية عندك زي 'Cairo', sans-serif */
+  font-size: 1rem;
+  font-weight: normal;
+  color: #555; /* نفس لون خط المهندس والحاج */
+  display: block;
+}
+
+/* توسيع المسافة فوق قسم العروسين لعدم التداخل */
+.couple-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+/* تنزيل الأسماء نفسها لتحت عن اللقب بنسبة متناسقة */
+.couple-container .name {
+  margin-top: 12px !important;
+  line-height: 1.4;
+}
+
+/* محاذاة حرف و في المنتصف */
+.and-symbol {
+  font-size: 1.8rem;
+  margin: 0 5px;
+  align-self: center;
+  padding-top: 15px;
+}
+
+/* منع التفاف سطر البركة */
+.prayer-line.single-line {
+  white-space: nowrap;
+
+}
+
+
+
+
+.monogram-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.intertwined-monogram {
+  width: 110px; /* تقدري تكبري أو تصغري الشعار من هنا */
+  height: auto;
+}
+
+.intertwined-monogram g {
+  stroke: #a38f6d; /* لون الخط الذهبي/البني للتصميم */
+}
+.monogram-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.footer-monogram-img {
+  width: 130px; /* تحكمي في الحجم زي ما تحبي من هنا */
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
     </style>
     </style>
@@ -2475,11 +2559,9 @@ html, body {
 
 
 
-
-
 <section class="card-section">
   <div class="invitation-container">
-    
+
     <!-- كلمة يتشرف -->
     <h2 class="title-top">يتشرف</h2>
 
@@ -2498,72 +2580,31 @@ html, body {
     <!-- نص المناسبة -->
     <p class="event-text">بدعوتكم لحضور زفاف نجليهما</p>
 
-    <!-- أسماء العروسين -->
+    <!-- أسماء العروسين مع حرف و بينهم -->
     <div class="couple-container">
       <div class="person">
         <span class="title-prefix">الدكتور</span>
         <h1 class="name font-calligraphy">عبدالعظيم</h1>
       </div>
+
+      <span class="and-symbol font-calligraphy">و</span>
+
       <div class="person">
         <span class="title-prefix">الدكتورة</span>
         <h1 class="name font-calligraphy">لبنى</h1>
       </div>
     </div>
 
-    <!-- الدعاء مقسم لسطرين مع حفظ المساحة الجانبية -->
+    <!-- الدعاء مع جعل السطر الثاني كاملاً في سطر واحد -->
     <div class="prayer-section">
       <p class="prayer-line">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا"</p>
-      <p class="prayer-line highlight">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
+      <p class="prayer-line highlight single-line">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
     </div>
 
   </div>
 </section>
 
 
-
-<section class="card-section">
-  <div class="invitation-container">
-    
-    <!-- كلمة يتشرف -->
-    <h2 class="title-top">يتشرف</h2>
-
-    <!-- أسماء الداعين (الأباء) -->
-    <div class="hosts-container">
-      <div class="host">
-        <span class="label">المهندس</span>
-        <h3 class="host-name font-calligraphy">انور مناع</h3>
-      </div>
-      <div class="host">
-        <span class="label">الحاج</span>
-        <h3 class="host-name font-calligraphy">سالم سالم</h3>
-      </div>
-    </div>
-
-    <!-- نص المناسبة -->
-    <p class="event-text">بدعوتكم لحضور زفاف نجليهما</p>
-
-    <!-- أسماء العروسين -->
-    <div class="couple-container">
-      <div class="person">
-        <span class="title-prefix">الدكتور</span>
-        <h1 class="name font-calligraphy">عبدالعظيم</h1>
-      </div>
-      <div class="person">
-        <span class="title-prefix">الدكتورة</span>
-        <h1 class="name font-calligraphy">لبنى</h1>
-      </div>
-    </div>
-
-    <!-- الدعاء مقسم لـ 4 أسطر عشان يظبط الفريم -->
-    <div class="prayer-section">
-      <p class="prayer-line">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم</p>
-      <p class="prayer-line">مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا"</p>
-      <p class="prayer-line highlight">بارك الله لهما وبارك عليهما</p>
-      <p class="prayer-line highlight">وجعل بينهما مودة ورحمة</p>
-    </div>
-
-  </div>
-</section>
 
 
 <!-- Countdown & Welcome Section -->
@@ -2576,7 +2617,7 @@ html, body {
             <div class="std-date">12 . 09 . 2026</div>
             
             <div class="single-photo-container">
-                <img src="./brideandgroom.png" alt="صورة العروسين" class="hero-photo">
+                <img src="./tw2m.png" alt="صورة العروسين" class="hero-photo">
             </div>
         </div>
 
@@ -2644,7 +2685,8 @@ html, body {
     
 
   
-   <!-- التذييل -->
+
+
 <footer style="position: relative; overflow: hidden;">
     <!-- وردة الشمال -->
     <img src="./photo2.png" class="footer-flower-left" alt="Floral Left">
@@ -2656,9 +2698,17 @@ html, body {
         <circle cx="12" cy="10" r="8"></circle>
         <circle cx="28" cy="10" r="8"></circle>
     </svg>
-    <h2 class="footer-names">ع و ل</h2>
+
+    <!-- صورة الشعار المدمج -->
+    <div class="monogram-container">
+        <img src="./dmg.png" class="footer-monogram-img" alt="شعار عبدالعظيم و لبنى">
+    </div>
+
     <div class="subtitle-caps" style="margin-top: 10px;">١٢ سبتمبر ٢٠٢٦</div>
 </footer>
+
+
+
 
     <!-- GSAP for Cinematic Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
